@@ -11,7 +11,9 @@ export class AppComponent {
   nombre: string = 'Rodrigo';
   textoPlaceHolder: string = 'Ingrese algo aqui';
   desabilitado: boolean = true;
-  constructor() {}
+  constructor() {
+    setInterval(() => ((this.desabilitado = false), 3000));
+  }
 
   getSuma(numero1: number, numero2: number) {
     return numero1 + numero2;

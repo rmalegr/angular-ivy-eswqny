@@ -3,6 +3,14 @@
     <hello name="{{ name }}"></hello>
     <p>Start editing to see some magic happen :)</p>
     <h3>la suma de 2 + 2 = {{ getSuma(2, 2) }}</h3>
-    <input type="text" [placeholder]="textoPlaceHolder" />
+    <input
+      type="text"
+      class="form-control"
+      [placeholder]="textoPlaceHolder"
+      [disabled]="desabilitado"
+    />
+    <br />
+    <br />
+    <img [src]="imgSrc" />
   </div>
 </div>

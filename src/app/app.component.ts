@@ -11,6 +11,8 @@ export class AppComponent {
   nombre: string = 'Rodrigo';
   textoPlaceHolder: string = 'Ingrese algo aqui';
   desabilitado: boolean = true;
+  imgSrc =
+    'https://thumbs.gfycat.com/OffbeatViciousHousefly-size_restricted.gif';
   constructor() {
     setInterval(() => ((this.desabilitado = false), 3000));
   }

@@ -10,7 +10,25 @@
       [disabled]="desabilitado"
     />
     <br />
+    <p>
+      <input
+        type="text"
+        class="form-control form-control-lg"
+        placeholder="Escriba algo aqui en two data Binding"
+        [(ngModel)]="texto1"
+      />
+      <br />
+      <br />
+      <img [src]="imgSrc" />
+      <br />
+      <br />
+    </p>
+
+    <h3>{{ texto }}</h3>
+    <button type="button" class="btn btn-primary" (click)="cambiarTexto()">
+      Click Me
+    </button>
     <br />
-    <img [src]="imgSrc" />
+    <p>{{ texto1}}</p>
   </div>
 </div>

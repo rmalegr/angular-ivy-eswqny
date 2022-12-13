@@ -29,6 +29,13 @@
       Click Me
     </button>
     <br />
-    <p>{{ texto1}}</p>
+    <p>{{ texto1 }}</p>
   </div>
+
+  <ul *ngFor="let estudiante of listEstudiantes; index as i">
+    <li>
+      {{ estudiante.nombre }}
+    </li>
+    <li>{{ estudiante.estado }}</li>
+  </ul>
 </div>

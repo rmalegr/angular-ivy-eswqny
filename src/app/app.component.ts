@@ -7,6 +7,7 @@ import getUAString from '@popperjs/core/lib/utils/userAgent';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  listEstudiantes: any[] = [{ nombre: 'rodrigo', estado: 'aprobado' }];
   name = 'Angular ' + VERSION.major;
   nombre: string = 'Rodrigo';
   textoPlaceHolder: string = 'Ingrese algo aqui';

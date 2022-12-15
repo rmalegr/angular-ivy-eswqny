@@ -1,5 +1,4 @@
 import { Component, VERSION } from '@angular/core';
-import getUAString from '@popperjs/core/lib/utils/userAgent';
 
 @Component({
   selector: 'my-app',
@@ -7,13 +6,19 @@ import getUAString from '@popperjs/core/lib/utils/userAgent';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  listEstudiantes: any[] = [{ nombre: 'rodrigo', estado: 'aprobado' }];
+  listEstudiantes: any[] = [
+    { nombre: 'rodrigo', estado: 'Aprobado' },
+    { nombre: 'rodrigo', estado: 'Promocionado' },
+    { nombre: 'rodrigo', estado: 'Aprobado' },
+    { nombre: 'rodrigo', estado: 'Promocionado' },
+  ];
   name = 'Angular ' + VERSION.major;
   nombre: string = 'Rodrigo';
   textoPlaceHolder: string = 'Ingrese algo aqui';
   texto: string = 'Este es un video event Binding';
   texto1: string = '';
   desabilitado: boolean = true;
+  mostrar: boolean = true;
   imgSrc =
     'https://thumbs.gfycat.com/OffbeatViciousHousefly-size_restricted.gif';
   constructor() {
@@ -24,6 +29,9 @@ export class AppComponent {
     return numero1 + numero2;
   }
 
+  toogle(): void {
+    this.mostrar = !this.mostrar;
+  }
   cambiarTexto(): void {
     this.texto = 'En el proximo video vamos a ver two data Binding';
   }

@@ -32,10 +32,29 @@
     <p>{{ texto1 }}</p>
   </div>
 
-  <ul *ngFor="let estudiante of listEstudiantes; index as i">
-    <li>
-      {{ estudiante.nombre }}
-    </li>
-    <li>{{ estudiante.estado }}</li>
-  </ul>
+  <button (click)="toogle()">Toogle</button>
+  <div *ngIf="mostrar">
+    <ul *ngFor="let estudiante of listEstudiantes; let i = index">
+      <li>{{ i + 1 }}</li>
+      <li>
+        {{ estudiante.nombre }}
+      </li>
+      <li
+        [ngStyle]="{
+          'font-style':
+            estudiante.estado === 'Promocionado' ? 'italic' : 'normal'
+        }"
+      >
+        <span
+          [ngClass]="estudiante.estado === 'Aprobado' ? 'badge badge-success' : 'badge badge-secondary'"
+        >
+          {{ estudiante.estado }}
+        </span>
+      </li>
+    </ul>
+
+    <h3 *ngIf="listEstudiantes.length === 0">
+      No hay Estudiantes para mostrar
+    </h3>
+  </div>
 </div>
